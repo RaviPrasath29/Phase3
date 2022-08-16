@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="emp" class="com.samples.s01springcoreDI.employee"
+		p:id="08" p:name="nilo" />
+	<bean name="hospital" class="com.samples.s01springcoreDI.Hospital">
+		<property name="name" value="Global Hospitals" />
+		<property name="departments">
+			<list>
+				<value>Casualty</value>
+				<value>OP</value>
+				<value>Labour Ward</value>
+			</list>
+
+		</property>
+	</bean>
+
+	<bean name="cardealer"
+		class="com.samples.s01springcoreDI.Cardealer">
+		<property name="name" value="ABC Motors" />
+		<property name="models">
+			<set>
+				<value>Hyundai Verna</value>
+				<value>Honda Civic</value>
+				<value>Maruti Baleno</value>
+				<value>Skoda Rapid</value>
+			</set>
+		</property>
+	</bean>
+
+	<bean name="customer" class="com.samples.s01springcoreDI.Customer"
+		p:id="02">
+		<property name="products">
+			<map>
+				<entry key="100" value="Sugar" />
+				<entry key="101" value="Chilly" />
+				<entry key="102" value="Rice" />
+				<entry key="103" value="Masala" />
+				<entry key="104" value="Salt" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
