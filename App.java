@@ -19,5 +19,8 @@ public class App
        Customer customer = (Customer) springContainer.getBean("customer");
        System.out.println(customer);
        
+       ShoppingCart shopping = (ShoppingCart) springContainer.getBean("ShoppingCart");
+       System.out.println(shopping);
+       
     }
 }

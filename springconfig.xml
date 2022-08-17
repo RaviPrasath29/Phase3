@@ -9,7 +9,7 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean name="emp" class="com.samples.s01springcoreDI.employee"
-		p:id="08" p:name="nilo" />
+		p:id="29" p:name="ravi" />
 	<bean name="hospital" class="com.samples.s01springcoreDI.Hospital">
 		<property name="name" value="Global Hospitals" />
 		<property name="departments">
@@ -47,5 +47,9 @@
 			</map>
 		</property>
 	</bean>
+	
+	<bean name="items" class="com.samples.s01springcoreDI.items" p:id="01" p:name="sugar" p:price="80" p:quantity="1000"/>
+	<bean name="ShoppingCart" class="com.samples.s01springcoreDI.ShoppingCart" p:items-ref="items"/>
+	
 
 </beans>
